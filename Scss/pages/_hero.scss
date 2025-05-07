@@ -1,0 +1,8 @@
+@use 'sass:map';
+@use 'abstracts/variables' as var;
+
+
+.hero{
+   background: url(/assets/images/bannar.jpg) no-repeat center / cover;
+   height: 100vh;
+}

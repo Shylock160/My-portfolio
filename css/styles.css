@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+html {
+  font-size: clamp(1rem, 1rem + 0.5vw, 1.25rem);
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+}
+
+body, p {
+  word-break: break-word;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, textarea, select {
+  font: inherit;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+:focus-visible {
+  outline: 2px solid dodgerblue;
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+img, video, svg, picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  object-fit: contain;
+}
+
+img.fill {
+  object-fit: cover;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+
+h2, h3, h4, h5, h6, p, button {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+nav .logo, nav .join-now-btn {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+nav .logo:hover, nav .join-now-btn:hover {
+  background-color: rgba(51, 51, 51, 0.2);
+  box-shadow: 5px 5px 10px black;
+}
+
+.hero {
+  background: url(/assets/images/bannar.jpg) no-repeat center/cover;
+  height: 100vh;
+}
+
+.typing-container {
+  width: 100%;
+  text-align: center;
+  padding-top: 15%;
+}
+
+#typed-text {
+  font-family: "Playfair Display", serif;
+  overflow: hidden;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.line-one {
+  font-size: 3rem;
+  font-weight: bold;
+  border-right: 2px solid #fff;
+  animation: blink 0.7s infinite;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.line-two {
+  font-size: 1.5rem;
+  font-weight: normal;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.line-two, .line-one {
+  color: #fff;
+}
+
+@keyframes blink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+}

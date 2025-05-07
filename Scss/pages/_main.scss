@@ -1,0 +1,42 @@
+.typing-container {
+    width: 100%;
+    text-align: center;
+    padding-top: 15%;
+  }
+  
+  #typed-text {
+    font-family: "Playfair Display", serif;
+    overflow: hidden;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  .line-one {
+    font-size: 3rem;
+    font-weight: bold;
+    border-right: 2px solid #fff;
+    animation: blink 0.7s infinite;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  .line-two {
+    font-size: 1.5rem;
+    font-weight: normal;
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+   .line-two, .line-one{
+    color: #fff;
+   }
+
+@keyframes blink{
+    0%, 100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #fff;
+    }
+}

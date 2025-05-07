@@ -1,0 +1,23 @@
+@use 'sass:map';
+@use 'abstracts/variables' as var;
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+
+    .logo, .join-now-btn{
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        font-family: "Roboto Condensed", sans-serif;
+
+        &:hover{
+            background-color: map.get(var.$colors, Dark);
+            box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 1.0);
+        }
+     }
+}
+
+

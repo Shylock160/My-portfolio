@@ -1,0 +1,13 @@
+img, video, svg, picture{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    object-fit: contain;
+}
+
+img.fill{
+    object-fit: cover;
+}
