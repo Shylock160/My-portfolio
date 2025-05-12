@@ -181,3 +181,52 @@ nav .logo:hover, nav .join-now-btn:hover {
   text-align: end;
   color: red;
 }
+
+footer {
+  text-align: center;
+  padding: 5px;
+}
+footer .social-icon {
+  margin-top: 15px;
+}
+footer .social-icon > i {
+  padding: 10px;
+}
+
+@media (max-width: 480px) {
+  body .typing-container {
+    padding-top: 250px;
+  }
+  body .typing-container #typed-text .line-one {
+    font-size: 1.8rem;
+  }
+  body .typing-container #typed-text .line-two {
+    font-size: 1.3rem;
+  }
+  body .form {
+    margin-top: 50px;
+    text-align: center;
+  }
+  body .form .form-section {
+    padding: 7px 5% 7px 5%;
+  }
+  body .form .form-section input[type=text], body .form .form-section input[type=email] {
+    width: 350px;
+  }
+  body .form button {
+    margin-inline: 25%;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  body .typing-container {
+    padding-top: 400px;
+  }
+  body .form .form-section {
+    padding: 50px 20% 30px 20%;
+  }
+  body .form button {
+    width: 30%;
+    margin-inline: 40%;
+  }
+}

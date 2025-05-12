@@ -1,0 +1,93 @@
+// Define breakpoints as variables
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1200px;
+$breakpoint-desktop: 1201px;
+
+// Mixin for media queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  }
+  
+  @else if $breakpoint == tablet {
+    @media (min-width: $breakpoint-mobile + 1) and (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  }
+  
+  @else if $breakpoint == laptop {
+    @media (min-width: $breakpoint-tablet + 1) and (max-width: $breakpoint-laptop) {
+      @content;
+    }
+  }
+  
+  @else if $breakpoint == desktop {
+    @media (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  }
+
+
+}
+
+// Example usage:
+body{
+
+  @include respond-to(mobile) {
+    .typing-container{
+        padding-top: 250px;
+
+         #typed-text{
+            .line-one {
+                 font-size: 1.8rem;
+            }
+        
+            .line-two {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    .form{
+    margin-top: 50px;
+    text-align: center;
+
+    .form-section{
+        padding: 7px 5% 7px 5%;
+
+        input[type="text"],input[type="email"]{
+        width: 350px;
+       } 
+    }
+
+     button {
+        margin-inline: 25%;  
+        margin-bottom: 20px;
+    }
+}
+
+  }
+
+  @include respond-to(tablet) {
+  }
+
+  @include respond-to(laptop) {
+   .typing-container{
+        padding-top: 400px; 
+    }
+
+    .form{
+    .form-section{
+        padding: 50px 20% 30px 20%;
+    }
+
+    button {
+        width: 30%;
+        margin-inline: 40%; 
+    }
+}
+  }
+}
