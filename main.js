@@ -1,3 +1,4 @@
+// Typing animation code
 const lineOneText = "The future is launching";
 const lineTwoText = "Be part of something amazing";
 
@@ -13,7 +14,7 @@ function typeLineOne() {
     index1++;
     setTimeout(typeLineOne, 100);
   } else {
-    setTimeout(typeLineTwo, 300); // pause before starting second line
+    setTimeout(typeLineTwo, 300);
   }
 }
 
@@ -25,4 +26,42 @@ function typeLineTwo() {
   }
 }
 
-window.onload = typeLineOne;
+// Form validation code
+function setupFormValidation() {
+  const form = document.getElementById("myForm");
+  const errorMessage = document.getElementById("error-message");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    
+    errorMessage.textContent = "";
+    
+    if (name === "") {
+      errorMessage.textContent = "Name is required.";
+      return;
+    }
+    
+    if (!validateEmail(email)) {
+      errorMessage.textContent = "Please enter a valid email address.";
+      return;
+    }
+    
+    alert("Form submitted successfully!");
+    form.reset();
+  });
+  
+  function validateEmail(email) {
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return pattern.test(email);
+  }
+}
+
+// Initialize everything when DOM is ready
+document.addEventListener("DOMContentLoaded", function() {
+  typeLineOne(); // Start typing animation
+  setupFormValidation(); // Setup form validation
+});
+

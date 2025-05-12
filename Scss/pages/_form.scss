@@ -1,0 +1,38 @@
+.form{
+    margin-top: 50px;
+    text-align: center;
+
+    .form-section{
+        display: flex;
+        flex-direction: column;
+        padding: 50px 45% 30px 30%;
+
+       input[type="text"],input[type="email"]{
+        width: 500px; /* Full width */
+        padding: 10px; 
+        border: 1px solid #000; 
+        border-radius: 4px; 
+        box-sizing: border-box;
+       }
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white; 
+        padding: 10px 15px; 
+        border-radius: 4px;
+        cursor: pointer; 
+        width: 50%;
+        margin-inline: 50%;
+
+        
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    p{
+        text-align: end;
+        color: red;
+    }
+}

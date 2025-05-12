@@ -149,3 +149,35 @@ nav .logo:hover, nav .join-now-btn:hover {
     border-color: #fff;
   }
 }
+.form {
+  margin-top: 50px;
+  text-align: center;
+}
+.form .form-section {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 45% 30px 30%;
+}
+.form .form-section input[type=text], .form .form-section input[type=email] {
+  width: 500px; /* Full width */
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 50%;
+  margin-inline: 50%;
+}
+.form button:hover {
+  background-color: #45a049;
+}
+.form p {
+  text-align: end;
+  color: red;
+}
